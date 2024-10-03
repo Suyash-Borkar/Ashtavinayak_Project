@@ -30,7 +30,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0;
 }
 
@@ -60,7 +60,7 @@ section h2 {
 }
 
 section h3 {
-    margin: 20px 0 10px;
+    margin: 20px 24px 10px;
 }
 
 section p, section ol {
@@ -104,6 +104,7 @@ footer {
     border: 2px solid #ddd;
 }
 
+/* Media query for screens wider than 768px */
 @media screen and (min-width: 768px) {
     #ganeshas div {
         display: flex;
@@ -111,14 +112,35 @@ footer {
     }
 
     #ganeshas div img {
-        width: 256px;
-        height: 256px;
+        width: 50%;
         margin-right: 20px;
-        margin-left: 15px;
-        border-radius: 140px;
+        border-radius: 220px;
     }
 
     #ganeshas div p {
         width: 50%;
+    }
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    #ganeshas div {
+        display: block;
+        padding: 10px;
+    }
+
+    #ganeshas div img {
+        margin-right: 0;
+        border-radius: 220px;
     }
 }
